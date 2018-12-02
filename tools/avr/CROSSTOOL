@@ -3,7 +3,7 @@ minor_version: "0"
 default_target_cpu: "avr"
 
 default_toolchain {
-  cpu: "avr"
+  cpu: "avr|gcc"
   toolchain_identifier: "avr8-gnu-toolchain-linux_x86_64"
 }
 
@@ -77,7 +77,7 @@ toolchain {
   # All warnings are enabled. Maybe enable -Werror as well?
   compiler_flag: "-Wall"
 
-  compiler_flag: "-std=gnu99"
+  compiler_flag: "-std=gnu++14"
 
   # Enable a few more warnings that aren't part of -Wall.
   compiler_flag: "-Wunused-but-set-parameter"
